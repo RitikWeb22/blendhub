@@ -1,0 +1,221 @@
+@font-face {
+  font-family: font1;
+  src: url(Gilroy-LightItalic.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: font1;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+#myvideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  position: fixed;
+  top: 0;
+}
+#nav {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  z-index: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+#nav .logo {
+  height: 70%;
+  mix-blend-mode: screen;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 30px;
+}
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 1.1vw;
+}
+.menu ul li {
+  position: relative;
+  cursor: pointer;
+}
+ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+/* On hover */
+ul li:hover::after {
+  width: 100%;
+}
+.menu button {
+  padding: 10px 30px;
+  background: rgb(186, 49, 49);
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.menu button:hover {
+  background: transparent;
+  border: 1px solid rgb(186, 49, 49);
+}
+#container {
+  width: 100%;
+  height: 80%;
+
+  position: relative;
+}
+
+#box1 {
+  width: 40%;
+  height: 80%;
+  border: 1px solid rgb(249, 91, 91);
+  position: absolute;
+  right: -30%;
+  top: 10%;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.item {
+  border: 2px solid rgb(186, 49, 49);
+  width: 80px;
+  height: 80px;
+  margin-left: -8%;
+  border-radius: 10px;
+  position: relative;
+}
+.icon h5 {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.icon h5:hover {
+  background: rgba(186, 49, 49, 0.353);
+  opacity: 1;
+}
+.icon h5 i {
+  font-size: 2vw;
+  color: white;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#box2 {
+  width: 45%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  justify-content: center;
+  gap: 20px;
+}
+
+#box2 h2 {
+  font-size: 5vw;
+  font-weight: 100;
+  line-height: 4.7vw;
+}
+
+#box2 p {
+  font-size: 1.2vw;
+  font-weight: 100;
+  color: #ffffffba;
+}
+
+.cssbuttons-io-button {
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  width: 50%;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em rgb(249, 91, 91);
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  color: #000000df;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
